@@ -157,8 +157,9 @@ def content(message):
         btn4 = types.KeyboardButton('Какой размер стипендии?')
         btn5 = types.KeyboardButton('Какая стоимость обучения?')
         btn6 = types.KeyboardButton('Схема расположения корпусов')
+        btn7 = types.KeyboardButton('Другой вопрос')
 
-        markup.add(btn1, btn2, btn3, btn4, btn5, btn6)
+        markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7)
         final_message = "Выбери интересующий тебя вопрос:"
 
     elif get_message_bot == "какой я получу диплом?":
@@ -208,6 +209,14 @@ def content(message):
         menu = types.KeyboardButton('Главное меню')
         markup.add(btn1, menu)
         final_message = 'В настоящее время в состав Белорусско-Российский университета входят лицей, архитектурно-строительный колледж, 7 учебно-лабораторных корпуса и 4 общежития', (bot.send_document(message.chat.id, 'http://cdn.bru.by/cache/university/sheme/map_big_2019_2.jpg'))
+
+    elif get_message_bot == "другой вопрос":
+        markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=2)
+        btn1 = types.KeyboardButton('Часто задаваемые вопросы')
+        menu = types.KeyboardButton('Главное меню')
+
+        markup.add(btn1, menu)
+        final_message = "Задай свой вопрос по телефону: +375(29)746-85-15"
 
     elif get_message_bot == "главное меню":
         markup = types.ReplyKeyboardMarkup(resize_keyboard=True, row_width=1)
