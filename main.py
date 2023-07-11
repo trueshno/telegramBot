@@ -24,7 +24,7 @@ def content(message):
 
     if get_message_bot == "наши соцсети":
         markup = types.InlineKeyboardMarkup()
-        markup.add(types.InlineKeyboardButton("Посетите наш сайт", url="http://ief.bru.by/"))
+        markup.add(types.InlineKeyboardButton("Посетите наш сайт", url="http://bru.by/"))
         markup.add(types.InlineKeyboardButton("Посетите наш TikTok", url="https://www.tiktok.com/@iefbru?_t=8c2lAB9mfNW&_r=1"))
         markup.add(types.InlineKeyboardButton("Посетите наш Instagram", url="https://www.instagram.com/ief_bru/?igshid=YmMyMTA2M2Y%3D"))
         markup.add(types.InlineKeyboardButton("Посетите наш Telegram", url="https://t.me/iefbru"))
